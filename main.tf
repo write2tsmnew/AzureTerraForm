@@ -1,4 +1,5 @@
+# Resource Group
 resource "azurerm_resource_group" "rg" {
-name = "my-testrg000001"
-location = "Australia East"
+  name     = "${var.prefix}-rg"
+  location = var.allowed_locations[0]
 }
